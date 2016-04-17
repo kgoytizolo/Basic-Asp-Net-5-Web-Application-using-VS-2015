@@ -1,0 +1,45 @@
+******************************************************************************************************************************************************
+
+1.3 Usando Visual Studio 2015 (Community Version) para crear aplicaciones web ASP.NET 5
+
+- Importante: Las plantillas generadas / aplicaciones web son generadas de manera distinta desde VS 2015 y VCode:
+- Las extensiones a usar para crear esta aplicación son las siguientes:
+	- Ir a TOOLS > Extensions and Updates > 
+		Add New File extension >
+		Web Essencials 2015 > 
+		Open Command Line > 
+		
+- Luego de instalar las extensiones, generar el nuevo proyecto web:
+	- Templates > Visual C# > Web > Seccion "ASP NET 5 Preview Templates" > Empty (para empezar a entender todo poco a poco)
+	  *Cuando se requieran nuevas características, se irán añadiendo nuevos paquetes NuGet, entre otros.
+	- Cuando verificamos la app web generada, el archivo project.json tiene la estructura base de la app creada desde Visual Code con el instalador
+	  de paquetes, pero mucho más simple porque es una app básica vacía. 
+	- Revisamos el archivo Startup.cs, el cual tiene el Builder, Hosting, Http e inyección de dependencias
+	- En el modo consola se puede ver que el objeto Hosting WebApplication.Run<Startup>(args) para levantar automáticamente el app web.
+	  Es una clase clásica para levantar el servidor. Llama a configureServices y Configure (Inyección de dependencias)
+	  	- Configure llama a:
+	  		- UseIISPlatformHandler: es un Middleware que deploya IIS, verifica Windows authentication, etc.
+	  		- Y el input ApplicationBuilder va a responder con un string "Hola Mundo"
+	- Para ejecutarlo, se tienen varias opciones:
+		- IIS Express
+		- web (línea de comandos con dnx web, como en Visual Code)
+	  *Por ahora, dejar en IIS :)
+	- En las propiedades de la web: Aplication 
+	  - Aparte del namespace, se puede ver la versión del DNX SDK, que es 1.0.0-rc-1-final (en mi caso update1)
+	  - Recordar que hay varios paquetes de runtimes deployados a escoger
+	  - Webroot (clásico wwwroot)
+	- En la parte de Debug, se indica como se va a levantar la app:
+	  - En el appURL, Visual Studio nos pone un puerto al azar, pero mejor se define el 8000 (para que no cambie a cada rato)
+	    http://localhost:8000/
+	- Ahora sí a ejecutarlo!! :)
+	- Cuando levanta la app, si verificamos el código fuente, solo dice "Hello World" y no hay código HTML! O_O
+	- Ahora en donde estaba "Hello World" escribir 
+	
+
+	  
+    - Ahora procedemos a construir poco a poco lo que necesitamos de esta aplicación:
+    	- 
+    	
+	  
+	  
+		
